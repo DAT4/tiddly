@@ -3,13 +3,13 @@ title "shell in c"
 start
 repeat
 :Input command;
-:Tokenize command;
+#palegreen:Tokenize command;
 if (exit) then 
   break
 elseif (cd) then
 :chdir;
 else (else)
-:run command;
+#pink:run command;
 endif
 backward: clear memory;
 repeat while (running) is (yes) not (no)
