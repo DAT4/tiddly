@@ -1,0 +1,18 @@
+@startuml
+title "shell in c"
+start
+repeat
+:Input command;
+:Tokenize command;
+if (exit) then 
+  break
+elseif (cd) then
+:chdir;
+else (else)
+:run command;
+endif
+backward: clear memory;
+repeat while (running) is (yes) not (no)
+->//merged step//;
+end
+@enduml
